@@ -1,0 +1,36 @@
+- admin stuff out of framework
+ 
+ARSE
+ - simple zeus / admin convenience stuff?
+
+- make jip tp action toggleable as mission maker
+
+admin menu
+ - teleport here
+ - teleport side leader (jip logic, if available. otherwise ???)
+ - full heal
+ - above will change to "Respawn and ..." when player is dead
+ make possible for multiple players at once. include group? include side? all? multiselect?
+ apply loadout
+ - show player status
+
+admin actions
+ - acre force unfuck
+ unflip / repair (/unwreck even?) vehicle at cursor
+
+admin addon:
+ can it be shown when unconscious?
+
+jebus module:
+ force speed
+ loadouts
+
+- reliable safe start call
+
+change task(even triggers mb?) states
+
+- open arsenal
+
+function to run code on player machine by name
+
+accessible by more than one admin at a time?

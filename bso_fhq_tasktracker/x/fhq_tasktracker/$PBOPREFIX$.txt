@@ -1,0 +1,6 @@
+﻿///<'bso_fhq_tasktracker.pbo' properties via Mikero's dos tools, dll version 7.16>///
+prefix=x\fhq_tasktracker
+Mikero=DePbo.dll
+//Pbo Type is: Arma Addon
+//Sha: 'B6CC142B7A992F0D2ED2264A3A3F0580CDBB6B6A'
+//////</properties>//////

@@ -1,0 +1,7 @@
+﻿///<'bso_misc.pbo' properties via Mikero's dos tools, dll version 7.16>///
+prefix=bso_misc
+Mikero=DePbo.dll.7.16
+version=Mon Apr 12 20:12:50 2021
+//Pbo Type is: Arma Addon
+//Sha: 'DE0387E462D780B0F12C76E2A28909D78C080CD8'
+//////</properties>//////

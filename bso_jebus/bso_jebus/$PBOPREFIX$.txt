@@ -1,0 +1,5 @@
+﻿///<'bso_jebus.pbo' properties via Mikero's dos tools, dll version 7.16>///
+prefix=bso_jebus
+//Pbo Type is: Arma Addon
+//Sha: '0A37D8AD639E1AF3D7544836AAB7ED7121FC6F7A'
+//////</properties>//////

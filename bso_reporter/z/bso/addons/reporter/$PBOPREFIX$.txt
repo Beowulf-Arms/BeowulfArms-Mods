@@ -1,0 +1,5 @@
+﻿///<'bso_reporter.pbo' properties via Mikero's dos tools, dll version 7.16>///
+prefix=z\bso\addons\reporter
+//Pbo Type is: Arma Addon
+//Sha: 'B5D563752D61DE02D161E003E66C588E71A399C5'
+//////</properties>//////

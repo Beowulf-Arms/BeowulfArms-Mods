@@ -1,0 +1,5 @@
+﻿///<'bso_main.pbo' properties via Mikero's dos tools, dll version 7.16>///
+prefix=z\bso\addons\main
+//Pbo Type is: Arma Addon
+//Sha: '9E5E7019C5FAA1132E4BEAB5BE87BE23C5FD5B70'
+//////</properties>//////

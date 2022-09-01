@@ -1,0 +1,7 @@
+﻿///<'BSO_Loadoutselector.pbo' properties via Mikero's dos tools, dll version 7.16>///
+prefix=bso_loadoutselector
+Mikero=DePbo.dll.7.16
+version=Mon Apr 19 19:35:00 2021
+//Pbo Type is: Arma Addon
+//Sha: '9ECCF4AD79ECE72E75E22460B0C98C57FC6A7C03'
+//////</properties>//////

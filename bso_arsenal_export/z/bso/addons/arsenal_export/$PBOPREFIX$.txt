@@ -1,0 +1,5 @@
+﻿///<'bso_arsenal_export.pbo' properties via Mikero's dos tools, dll version 7.16>///
+prefix=z\bso\addons\arsenal_export
+//Pbo Type is: Arma Addon
+//Sha: 'FD31BD5419E6D292505F8707A58F81054DD28674'
+//////</properties>//////

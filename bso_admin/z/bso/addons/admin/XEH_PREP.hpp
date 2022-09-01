@@ -1,0 +1,14 @@
+PREP(addAdminAction);
+PREP(addMissionEnd);
+PREP(createAdminActions);
+PREP(createEndActions);
+PREP(getPlayerStatus);
+PREP(getSelectedPlayer);
+PREP(heal);
+PREP(refreshDialog);
+PREP(selChanged);
+PREP(showDialog);
+PREP(tpHere);
+PREP(tpJip);
+PREP(makeAcrePerfect);
+PREP(tpTo);

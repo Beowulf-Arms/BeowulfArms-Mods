@@ -1,0 +1,27 @@
+respawn templates
+ ace spectator:
+  option: restrict to watch own side
+  - admin: find a safe place when pressing esc
+
+ advanced (based on "Tickets","MenuPosition"):
+  - https://community.bistudio.com/wiki/Arma_3_Respawn
+  - class CfgRespawnTemplates
+  - define set of spawn points / sides,
+  - define with personal tickets and side tickets
+  - wave: provide function that takes respawn point and side
+  - messages / hooks for out of tickets stuff?
+  - enabling/disabling spawn points
+  - support multiple sides?
+  - tickets for special units
+  - spawn points for special units
+
+
+- enable spectate in MenuPosition?
+- make sure spectator becomes available if vehicle is destroyed
+- automatically go to spectator when there are no more options
+
+check if ace spectator removes people from group / slotting screen
+
+add documentation
+add logging
+create test mission

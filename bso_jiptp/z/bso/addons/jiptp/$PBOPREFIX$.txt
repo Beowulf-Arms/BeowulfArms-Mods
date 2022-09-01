@@ -1,0 +1,5 @@
+﻿///<'bso_jiptp.pbo' properties via Mikero's dos tools, dll version 7.16>///
+prefix=z\bso\addons\jiptp
+//Pbo Type is: Arma Addon
+//Sha: 'EF05E47E4BF420752CE3DB316AA09A231EF98046'
+//////</properties>//////
