@@ -27,6 +27,6 @@ class Extended_PostInit_EventHandlers
 {
 	class beo_rules_ui
 	{
-		clientInit = "call ('beo_rules_ui\XEH_postClientInit.sqf' call SLX_XEH_COMPILE)";
+		clientInit = "call ('beo_rules\XEH_postClientInit.sqf' call SLX_XEH_COMPILE)";
 	};
 };
