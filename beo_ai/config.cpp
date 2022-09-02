@@ -57,16 +57,16 @@ class CfgFactionClasses
 
 class CfgAISkill
 {
-	aimingAccuracy[] = {0, 0, 1, 0.5};
-	aimingShake[] = {0, 0, 1, 0.5};
-	aimingSpeed[] = {0, 0, 1, 0.5};
-	commanding[] = {0, 0, 1, 7};
+	aimingAccuracy[] = {0, 0, 1, 0.7};
+	aimingShake[] = {0, 0, 1, 0.7};
+	aimingSpeed[] = {0, 0, 1, 0.7};
+	commanding[] = {0, 0, 1, 0.7};
 	courage[] = {0, 0, 1, 1};
 	//endurance[] = {0, 0, 1, 1}; Has been disabled in Arma 3
-	general[] = {0, 0, 1, 7};
-	reloadSpeed[] = {0, 0, 1, 7};
-	spotDistance[] = {0, 0, 1, 0.5};
-	spotTime[] = {0, 0, 1, 0.5};
+	general[] = {0, 0, 1, 0.7};
+	reloadSpeed[] = {0, 0, 1, 0.7};
+	spotDistance[] = {0, 0, 1, 0.7};
+	spotTime[] = {0, 0, 1, 0.7};
 };
 
 class cfgVehicles
