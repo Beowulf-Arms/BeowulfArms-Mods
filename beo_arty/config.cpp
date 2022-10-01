@@ -12,7 +12,7 @@ class CfgPatches
 	{
 		units[] = {};
 		weapons[] = {};
-		requiredAddons[] = {"A3_Weapons_F","A3_Weapons_F_Mark","A3_Weapons_F_Exp","rhs_c_weapons","rhsusf_c_weapons","rhssaf_c_weapons","rhsgref_c_weapons","beo_wps","beo_ai","beo_rokit"};
+		requiredAddons[] = {"A3_Weapons_F","A3_Weapons_F_Mark","A3_Weapons_F_Exp","rhs_c_weapons","rhsusf_c_weapons","rhssaf_c_weapons","rhsgref_c_weapons","ace_compat_rhs_afrf3","ace_compat_rhs_usf3","beo_wps","beo_ai","beo_rokit"};
 		version = "1.0";
 		requiredVersion = "1.0";
 		author = "Walker";
@@ -51,6 +51,19 @@ class CfgVehicles
 				//"8Rnd_82mm_Mo_Flare_white","8Rnd_82mm_Mo_Smoke_white"
 			};
 		};	
+	/*	
+		class ACE_CSW 
+		{
+			ammoLoadTime = 3;
+			ammoUnloadTime = 3;
+			desiredAmmo = 1;
+			disassembleTurret = "ace_csw_mortarBaseplate";
+			disassembleWeapon = "ace_compat_rhs_usf3_m252_carry";
+			enabled = 0;
+			magazineLocation = "";
+			proxyWeapon = "";
+		};
+	*/
 	};
 	
 	class beo_arty_mk6_opf: beo_arty_mk6
@@ -102,6 +115,20 @@ class CfgVehicles
 				//"8Rnd_82mm_Mo_Flare_white","8Rnd_82mm_Mo_Smoke_white"
 			};
 		};	
+	/*	
+		class ACE_CSW 
+		{
+			ammoLoadTime = 3;
+			ammoUnloadTime = 3;
+			desiredAmmo = 1;
+			disassembleTurret = "ace_csw_mortarBaseplate";
+			disassembleWeapon = "ace_csw_staticMortarCarry";
+			enabled = 0;
+			magazineLocation = "_target selectionPosition 'usti hlavne'";
+			proxyWeapon = "ace_mk6mortar_fnc_csw_getProxyWeapon";
+		};
+		
+	*/
 	};
 	
 	class beo_arty_m252_opf: beo_arty_m252
@@ -152,6 +179,19 @@ class CfgVehicles
 				//"8Rnd_82mm_Mo_Flare_white","8Rnd_82mm_Mo_Smoke_white"
 			};
 		};	
+		/*
+		class ACE_CSW 
+		{
+			ammoLoadTime = 3;
+			ammoUnloadTime = 3;
+			desiredAmmo = 1;
+			disassembleTurret = "ace_csw_mortarBaseplate";
+			disassembleWeapon = "ace_compat_rhs_usf3_m252_carry";
+			enabled = 0;
+			magazineLocation = "";
+			proxyWeapon = "";
+		};
+		*/
 	};
 	
 	class beo_arty_2b14_opf: beo_arty_2b14
@@ -589,6 +629,60 @@ class CfgVehicles
 		crew = "beo_ai_crew_ind";
 		typicalCargo[] = {"beo_ai_crew_ind"};
 	};
+
+
+
+
+	class UK3CB_Hilux_Mortar;
+	class UK3CB_B_G_Hilux_Mortar: UK3CB_Hilux_Mortar
+	{
+		class Turrets;
+		class MainTurret;
+	};	
+	
+	class beo_arty_hilux_mortar: UK3CB_B_G_Hilux_Mortar
+	{
+		scope = 2;
+		displayName = "[BEO AI] Hilux Mortar";
+		artilleryScanner = 1;
+		editorSubcategory = "rhs_EdSubcat_artillery";
+		vehicleClass = "rhs_vehclass_artillery";
+		author = "Walker";
+		side = 1;
+		faction = "beo_ai_blu";
+		crew = "beo_ai_crew";
+		typicalCargo[] = {"beo_ai_crew"};
+		class Turrets: Turrets 
+		{		
+			class MainTurret: MainTurret
+			{
+				magazines[] = {"beo_arty_mag12_81_he","beo_arty_mag12_81_he","beo_arty_mag12_81_he","beo_arty_mag12_81_he","beo_arty_mag12_81_he"};
+				weapons[] = {"beo_arty_81mm"};
+
+			};
+		};	
+	};
+	
+	class beo_arty_hilux_mortar_opf: beo_arty_hilux_mortar
+	{
+		scope = 2;
+		side = 0;
+		faction = "beo_ai_opf";
+		crew = "beo_ai_crew_opf";
+		typicalCargo[] = {"beo_ai_crew_opf"};
+	};
+	
+	class beo_arty_hilux_mortar_ind: beo_arty_hilux_mortar
+	{
+		scope = 2;
+		side = 2;
+		faction = "beo_ai_ind";
+		crew = "beo_ai_crew_ind";
+		typicalCargo[] = {"beo_ai_crew_ind"};
+	};
+
+
+
 };
 
 class Mode_SemiAuto;
@@ -637,7 +731,7 @@ class CfgWeapons
 			////aiDispersionCoefX = 20;
 			////aiDispersionCoefY = 20;
 			reloadTime = 10;
-			showToPlayer = 0;
+			showToPlayer = 1;
 		};
 		class Single1: Single1
 		{
@@ -645,7 +739,7 @@ class CfgWeapons
 			////aiDispersionCoefX = 20;
 			////aiDispersionCoefY = 20;
 			reloadTime = 10;
-			showToPlayer = 0;
+			showToPlayer = 1;
 		};
 		class Single2: Single2
 		{
@@ -653,7 +747,7 @@ class CfgWeapons
 			////aiDispersionCoefX = 20;
 			////aiDispersionCoefY = 20;
 			reloadTime = 10;
-			showToPlayer = 0;
+			showToPlayer = 1;
 		};
 		class Single3: Single3
 		{
@@ -661,7 +755,7 @@ class CfgWeapons
 			////aiDispersionCoefX = 20;
 			//aiDispersionCoefY = 20;
 			reloadTime = 10;
-			showToPlayer = 0;
+			showToPlayer = 1;
 		};
 		class Burst0: Burst0
 		{
@@ -669,7 +763,7 @@ class CfgWeapons
 			//aiDispersionCoefX = 20;
 			//aiDispersionCoefY = 20;
 			reloadTime = 10;
-			showToPlayer = 0;
+			showToPlayer = 1;
 		};
 		class Burst1: Burst1
 		{
@@ -677,7 +771,7 @@ class CfgWeapons
 			//aiDispersionCoefX = 20;
 			//aiDispersionCoefY = 20;
 			reloadTime = 5;
-			showToPlayer = 0;
+			showToPlayer = 1;
 			minRange = 200;
 			midRange = 1000;
 			maxRange = 2000;
@@ -688,7 +782,7 @@ class CfgWeapons
 			//aiDispersionCoefX = 15;
 			//aiDispersionCoefY = 15;
 			reloadTime = 5;
-			showToPlayer = 0;
+			showToPlayer = 1;
 		};
 		class Burst3: Burst3
 		{
@@ -696,7 +790,7 @@ class CfgWeapons
 			//aiDispersionCoefX = 10;
 			//aiDispersionCoefY = 10;
 			reloadTime = 5;
-			showToPlayer = 0;
+			showToPlayer = 1;
 		};			
 	};	
 	
@@ -838,7 +932,7 @@ class CfgWeapons
 			reloadSound[] = {"A3\sounds_f\dummysound",1,1,20};
 			reloadTime = 6;
 			requiredOpticType = -1;
-			showToPlayer = 0;
+			showToPlayer = 1;
 			sound[] = {"",10,1};
 			soundBegin[] = {"sound",1};
 			soundBeginWater[] = {"sound",1};
@@ -860,7 +954,7 @@ class CfgWeapons
 			//aiDispersionCoefX = 20;
 			//aiDispersionCoefY = 20;
 			reloadTime = 5;
-			showToPlayer = 0;
+			showToPlayer = 1;
 			minRange = 800;
 			minRangeProbab = 1;
 			midRange = 1000;
@@ -909,7 +1003,7 @@ class CfgWeapons
 			//aiDispersionCoefX = 20;
 			//aiDispersionCoefY = 20;
 			reloadTime = 4;
-			showToPlayer = 0;
+			showToPlayer = 1;
 		};
 		class Single1: Single1
 		{
@@ -917,7 +1011,7 @@ class CfgWeapons
 			//aiDispersionCoefX = 20;
 			//aiDispersionCoefY = 20;
 			reloadTime = 4;
-			showToPlayer = 0;
+			showToPlayer = 1;
 		};
 		class Single2: Single2
 		{
@@ -925,7 +1019,7 @@ class CfgWeapons
 			//aiDispersionCoefX = 20;
 			//aiDispersionCoefY = 20;
 			reloadTime = 4;
-			showToPlayer = 0;
+			showToPlayer = 1;
 		};
 		class Single3: Single3
 		{
@@ -933,7 +1027,7 @@ class CfgWeapons
 			//aiDispersionCoefX = 20;
 			//aiDispersionCoefY = 20;
 			reloadTime = 4;
-			showToPlayer = 0;
+			showToPlayer = 1;
 		};
 		class Single4: Single4
 		{
@@ -941,7 +1035,7 @@ class CfgWeapons
 			//aiDispersionCoefX = 20;
 			//aiDispersionCoefY = 20;
 			reloadTime = 4;
-			showToPlayer = 0;
+			showToPlayer = 1;
 		};	
 		class Burst0: Burst0
 		{
@@ -949,7 +1043,7 @@ class CfgWeapons
 			//aiDispersionCoefX = 20;
 			//aiDispersionCoefY = 20;
 			reloadTime = 4;
-			showToPlayer = 0;
+			showToPlayer = 1;
 		};
 		class Burst1: Burst1
 		{
@@ -957,7 +1051,7 @@ class CfgWeapons
 			//aiDispersionCoefX = 20;
 			//aiDispersionCoefY = 20;
 			reloadTime = 4;
-			showToPlayer = 0;
+			showToPlayer = 1;
 			minRange = 150;
 			midRange = 1175;
 			maxRange = 26600;
@@ -968,7 +1062,7 @@ class CfgWeapons
 			//aiDispersionCoefX = 15;
 			//aiDispersionCoefY = 15;
 			reloadTime = 4;
-			showToPlayer = 0;
+			showToPlayer = 1;
 		};
 		class Burst3: Burst3
 		{
@@ -976,7 +1070,7 @@ class CfgWeapons
 			//aiDispersionCoefX = 10;
 			//aiDispersionCoefY = 10;
 			reloadTime = 4;
-			showToPlayer = 0;
+			showToPlayer = 1;
 		};
 		class Burst4: Burst4
 		{
@@ -984,7 +1078,7 @@ class CfgWeapons
 			//aiDispersionCoefX = 5;
 			//aiDispersionCoefY = 5;
 			reloadTime = 4;
-			showToPlayer = 0;
+			showToPlayer = 1;
 		};		
 
 		magazines[] = {
