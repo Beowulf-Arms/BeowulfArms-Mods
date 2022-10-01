@@ -1,20 +1,16 @@
 player createDiarySubject ["beo_info", "Beowulf Arms"];
 player createDiaryRecord ["beo_info",["House Rules","
-- <b>Don’t be a dick<b/> - If you have to stop and think about it, you are probably being a dick.
-<br /><br />
-- As a primarily ArmA tactical realism community, we count upon our players having a high level of maturity as expected from the rest of the ArmA community.
-<br /><br />
-- Respect your fellow players, treat people as you would wish to be treated.
-<br /><br />
-- Beowulf as a community will not tolerate warez, bullying, racism or any other kind of antisocial / illegal or generally unacceptable behaviour within the community.
-<br /><br />
-- For the ease of communication, only English shall be used during sessions.
-<br /><br />
-- The use of third party (unapproved) scripts and mods on any Beowulf server is strictly prohibited and may result in permanent banning. 
-<br /><br />
-- Do not do anything in a game session which might disrupt or ruin the experience for other players. For example: (deliberate) team killing, spoiling surprises etc. 
-<br /><br />
-- These are just general guidelines, the Beowulf admin team can (and will) act as they see fit for the benefit of the community.
-<br /><br />
-- <b>If in doubt, refer to rule 1.<b>
+<b>0. Don't Be A Dick</b> - If you have to ask yourself “am I okay to do this?”, then the answer is probably a no!
+<br />
+<b>1. Respect Your Fellow Members</b> - Bullying, harassment, discrimination, petty name calling, and general toxicity will not be tolerated. Refer to rule 0.
+<br />
+<b>2. Respect the Staff</b> - The Beowulf Arms staff will act as they see fit for the benefit of the community and all its members. Their word is final. Private appeals can be raised separately.
+<br />
+<b>3. Play Maturely</b> - On Discord or during community events. Do not spoil the enjoyment of others with immature behaviour. In ArmA, this may be the ignoring of orders, spamming soundboards, clogging up radio channels etc etc. Such actions will result in action from the staff.
+<br />
+<b>4. Don't Promote Illegal Activity</b> - This includes Piracy, Hacking & other illicit behaviour.
+<br />
+<b>5. Please only use English during events</b> - To simplify communications across our global community, all members should use English on Discord and during community events.
+<br />
+<b>6. Have Fun</b> - We are ALL here to have a good time and enjoy ourselves. Always bare this in mind for your own, and others enjoyment. 
 "]];
