@@ -7,7 +7,7 @@ class CfgPatches
 	{
 		units[] = {"beo_bms_launcher_static","beo_bms_launcher_static_opf","beo_bms_launcher_static_ind","beo_bms_launcher_static_mk2","beo_bms_launcher_static_mk2_opf","beo_bms_launcher_static_mk2_ind","beo_bms_launcher_static_mk3","beo_bms_launcher_static_mk3_opf","beo_bms_launcher_static_mk3_ind","beo_bms_launcher_static_AT","beo_bms_launcher_static_AT_opf","beo_bms_launcher_static_AT_ind","beo_bms_launcher_static_AT_mk2","beo_bms_launcher_static_AT_mk2_opf","beo_bms_launcher_static_AT_mk2_ind","beo_bms_launcher_static_AT_mk3","beo_bms_launcher_static_AT_mk3_opf","beo_bms_launcher_static_AT_mk3_ind","beo_bms_launcher_static_AP","beo_bms_launcher_static_AP_opf","beo_bms_launcher_static_AP_ind","beo_bms_launcher_static_AP_mk2","beo_bms_launcher_static_AP_mk2_opf","beo_bms_launcher_static_AP_mk2_ind","beo_bms_launcher_static_AP_mk3","beo_bms_launcher_static_AP_mk3_opf","beo_bms_launcher_static_AP_mk3_ind"};
 		weapons[] = {"beo_bms_launcher"};
-		requiredAddons[] = {"A3_Characters_F_BLUFOR","A3_Characters_F_Common","A3_Characters_F_Heads","A3_Static_F_Exp_AA_01"};
+		requiredAddons[] = {"A3_Characters_F_BLUFOR","A3_Characters_F_Common","A3_Characters_F_Heads","A3_Static_F_Exp_AA_01","uk3cb_factions_vehicles_hilux"};
 		version = "1.0";
 		requiredVersion = "1.0";
 		versionDesc = "Beowulf Missile Systems";
@@ -206,7 +206,7 @@ class cfgAmmo
 	class beo_bms_ammo_at: ACE_Javelin_FGM148
 	{
 		cmImmunity = 0.4;
-		initTime = 1;
+		initTime = 0.25;
 		effectsMissile = "beo_bms_missile5_black";
 		hit = 70;
 		indirectHit = 20;
@@ -348,6 +348,26 @@ class cfgMagazines
 		descriptionShort = "Type: Anti-Air NYAN Missile<br />Rounds: 1<br />Used in: Beowulf BMS Launcher";
 		ammo = "beo_bms_ammo_aa_nyan";
 	};
+
+// AA Missiles - Hilux/IGLA
+	class beo_bms_mag_aa_2: beo_bms_mag_aa
+	{
+		count = 2;
+	};
+	class beo_bms_mag_aa_mk2_2: beo_bms_mag_aa_mk2
+	{
+		count = 2;
+	};
+	class beo_bms_mag_aa_mk3_2: beo_bms_mag_aa_mk3
+	{
+		count = 2;
+	};
+	class beo_bms_mag_aa_nyan_2: beo_bms_mag_aa_nyan
+	{
+		count = 2;
+	};
+
+// AT Missiles	
 	class Titan_AT;
 	class beo_bms_mag_at: Titan_AT
 	{
@@ -444,6 +464,27 @@ class cfgWeapons
 			libTextDesc = "This is not just any missile system... This is the Beowulf Missile System... Designed by top Chernarussian science, the Beowulf Missile System uses grav-arch-flux technology to connect missile from platform to target. Manufactured In the Feruz-Abad region of Takistan, the launcher platform is capable of deploying munitions to kinetic intervene targets, and dominate the anti-armour, anti-air, anti-bunker and anti-personal domain. Order now and get very good price.";
 		};
 	};
+
+	class rhs_weap_stinger_Launcher;
+	class uk3cb_weap_igla_launcher: rhs_weap_stinger_Launcher
+	{
+		magazines[] +=
+		{
+			"beo_bms_mag_aa","beo_bms_mag_aa_mk2","beo_bms_mag_aa_mk3","beo_bms_mag_aa_nyan","beo_bms_mag_aa_2","beo_bms_mag_aa_mk2_2","beo_bms_mag_aa_mk3_2","beo_bms_mag_aa_nyan_2"
+		};
+
+	};
+
+	class rhs_weap_9K114_launcher;
+	class rhs_weap_9K115_launcher: rhs_weap_9K114_launcher
+	{
+		magazines[] +=
+		{
+			"beo_bms_mag_at","beo_bms_mag_at_mk2","beo_bms_mag_at_mk3","beo_bms_mag_ap","beo_bms_mag_ap_mk2","beo_bms_mag_ap_mk3"
+		};
+
+	};
+	
 };
 class cfgVehicles
 {
@@ -777,4 +818,241 @@ class cfgVehicles
 		displayName = "BMS Static Launcher - AP Mk3";
 		crew = "beo_ai_crew_ind";
 	};
+
+
+
+// BMS Offroad AA (Hilux/Igla)
+	class UK3CB_Hilux_Igla_Chair;
+	class UK3CB_B_G_Hilux_Igla_Chair: UK3CB_Hilux_Igla_Chair
+	{
+		class Turrets;
+		class MainTurret;
+	};
+	class bso_bms_offroad_AA: UK3CB_B_G_Hilux_Igla_Chair
+	{
+		scope = 2;
+		scopeCurator = 2;
+		side = 1;
+		faction = "beo_ai_blu";
+		displayName = "BMS Offroad Launcher - AA Mk1";
+		crew = "beo_ai_crew_opf";
+		class Turrets: Turrets
+		{
+			class MainTurret: MainTurret
+			{
+				//maxTurn = 360;
+				//weapons[] = {"beo_bms_launcher"};
+				magazines[] = {"beo_bms_mag_aa_2","beo_bms_mag_aa_2","beo_bms_mag_aa_2","beo_bms_mag_aa_2","beo_bms_mag_aa_2","beo_bms_mag_aa_2","beo_bms_mag_aa_2","beo_bms_mag_aa_2","beo_bms_mag_aa_2","beo_bms_mag_aa_2","beo_bms_mag_aa_2","beo_bms_mag_aa_2"};
+			};
+		};
+	};
+	class bso_bms_offroad_AA_opf: bso_bms_offroad_AA
+	{
+		scope = 2;
+		scopeCurator = 2;
+		side = 0;
+		faction = "beo_ai_opf";
+		crew = "beo_ai_crew_opf";
+	};
+	class bso_bms_offroad_AA_ind: bso_bms_offroad_AA
+	{
+		scope = 2;
+		scopeCurator = 2;
+		side = 2;
+		faction = "beo_ai_ind";
+		crew = "beo_ai_crew_ind";
+	};
+
+
+	class bso_bms_offroad_AA_mk2: bso_bms_offroad_AA
+	{
+		scope = 2;
+		scopeCurator = 2;
+		side = 1;
+		faction = "beo_ai_blu";
+		displayName = "BMS Offroad Launcher - AA Mk2";
+		crew = "beo_ai_crew_opf";
+		class Turrets: Turrets
+		{
+			class MainTurret: MainTurret
+			{
+				//maxTurn = 360;
+				//weapons[] = {"beo_bms_launcher"};
+				magazines[] = {"beo_bms_mag_aa_mk2_2","beo_bms_mag_aa_mk2_2","beo_bms_mag_aa_mk2_2","beo_bms_mag_aa_mk2_2","beo_bms_mag_aa_mk2_2","beo_bms_mag_aa_mk2_2","beo_bms_mag_aa_mk2_2","beo_bms_mag_aa_mk2_2","beo_bms_mag_aa_mk2_2","beo_bms_mag_aa_mk2_2","beo_bms_mag_aa_mk2_2","beo_bms_mag_aa_mk2_2"};
+			};
+		};
+	};
+	class bso_bms_offroad_AA_mk2_opf: bso_bms_offroad_AA_mk2
+	{
+		scope = 2;
+		scopeCurator = 2;
+		side = 0;
+		faction = "beo_ai_opf";
+		crew = "beo_ai_crew_opf";
+	};
+	class bso_bms_offroad_AA_mk2_ind: bso_bms_offroad_AA_mk2
+	{
+		scope = 2;
+		scopeCurator = 2;
+		side = 2;
+		faction = "beo_ai_ind";
+		crew = "beo_ai_crew_ind";
+	};
+
+
+	class bso_bms_offroad_AA_mk3: bso_bms_offroad_AA
+	{
+		scope = 2;
+		scopeCurator = 2;
+		side = 1;
+		faction = "beo_ai_blu";
+		displayName = "BMS Offroad Launcher - AA Mk3";
+		crew = "beo_ai_crew_opf";
+		class Turrets: Turrets
+		{
+			class MainTurret: MainTurret
+			{
+				//maxTurn = 360;
+				//weapons[] = {"beo_bms_launcher"};
+				magazines[] = {"beo_bms_mag_aa_mk3_2","beo_bms_mag_aa_mk3_2","beo_bms_mag_aa_mk3_2","beo_bms_mag_aa_mk3_2","beo_bms_mag_aa_mk3_2","beo_bms_mag_aa_mk3_2","beo_bms_mag_aa_mk3_2","beo_bms_mag_aa_mk3_2","beo_bms_mag_aa_mk3_2","beo_bms_mag_aa_mk3_2","beo_bms_mag_aa_mk3_2","beo_bms_mag_aa_mk3_2"};
+			};
+		};
+	};
+	class bso_bms_offroad_AA_mk3_opf: bso_bms_offroad_AA_mk3
+	{
+		scope = 2;
+		scopeCurator = 2;
+		side = 0;
+		faction = "beo_ai_opf";
+		crew = "beo_ai_crew_opf";
+	};
+	class bso_bms_offroad_AA_mk3_ind: bso_bms_offroad_AA_mk3
+	{
+		scope = 2;
+		scopeCurator = 2;
+		side = 2;
+		faction = "beo_ai_ind";
+		crew = "beo_ai_crew_ind";
+	};
+
+
+
+
+
+// BMS Offroad AT (Hilux/Metis)
+	class UK3CB_Hilux_Metis;
+	class UK3CB_B_G_Hilux_Metis: UK3CB_Hilux_Metis 
+	{
+		class Turrets;
+		class MainTurret;
+	};
+	class bso_bms_offroad_AT: UK3CB_B_G_Hilux_Metis
+	{
+		scope = 2;
+		scopeCurator = 2;
+		side = 1;
+		faction = "beo_ai_blu";
+		displayName = "BMS Offroad Launcher - AT Mk1";
+		crew = "beo_ai_crew_opf";
+		class Turrets: Turrets
+		{
+			class MainTurret: MainTurret
+			{
+				//maxTurn = 360;
+				//weapons[] = {"beo_bms_launcher"};
+				magazines[] = {"beo_bms_mag_at","beo_bms_mag_at","beo_bms_mag_at","beo_bms_mag_at","beo_bms_mag_at","beo_bms_mag_at","beo_bms_mag_at","beo_bms_mag_at","beo_bms_mag_at","beo_bms_mag_at","beo_bms_mag_at","beo_bms_mag_at"};
+			};
+		};
+	};
+	class bso_bms_offroad_AT_opf: bso_bms_offroad_AT
+	{
+		scope = 2;
+		scopeCurator = 2;
+		side = 0;
+		faction = "beo_ai_opf";
+		crew = "beo_ai_crew_opf";
+	};
+	class bso_bms_offroad_AT_ind: bso_bms_offroad_AT
+	{
+		scope = 2;
+		scopeCurator = 2;
+		side = 2;
+		faction = "beo_ai_ind";
+		crew = "beo_ai_crew_ind";
+	};
+
+
+	class bso_bms_offroad_AT_mk2: bso_bms_offroad_AT
+	{
+		scope = 2;
+		scopeCurator = 2;
+		side = 1;
+		faction = "beo_ai_blu";
+		displayName = "BMS Offroad Launcher - AT Mk2";
+		crew = "beo_ai_crew_opf";
+		class Turrets: Turrets
+		{
+			class MainTurret: MainTurret
+			{
+				//maxTurn = 360;
+				//weapons[] = {"beo_bms_launcher"};
+				magazines[] = {"beo_bms_mag_at_mk2","beo_bms_mag_at_mk2","beo_bms_mag_at_mk2","beo_bms_mag_at_mk2","beo_bms_mag_at_mk2","beo_bms_mag_at_mk2","beo_bms_mag_at_mk2","beo_bms_mag_at_mk2","beo_bms_mag_at_mk2","beo_bms_mag_at_mk2","beo_bms_mag_at_mk2","beo_bms_mag_at_mk2"};
+			};
+		};
+	};
+	class bso_bms_offroad_AT_mk2_opf: bso_bms_offroad_AT_mk2
+	{
+		scope = 2;
+		scopeCurator = 2;
+		side = 0;
+		faction = "beo_ai_opf";
+		crew = "beo_ai_crew_opf";
+	};
+	class bso_bms_offroad_AT_mk2_ind: bso_bms_offroad_AT_mk2
+	{
+		scope = 2;
+		scopeCurator = 2;
+		side = 2;
+		faction = "beo_ai_ind";
+		crew = "beo_ai_crew_ind";
+	};
+
+
+	class bso_bms_offroad_AT_mk3: bso_bms_offroad_AT
+	{
+		scope = 2;
+		scopeCurator = 2;
+		side = 1;
+		faction = "beo_ai_blu";
+		displayName = "BMS Offroad Launcher - AT Mk3";
+		crew = "beo_ai_crew_opf";
+		class Turrets: Turrets
+		{
+			class MainTurret: MainTurret
+			{
+				//maxTurn = 360;
+				//weapons[] = {"beo_bms_launcher"};
+				magazines[] = {"beo_bms_mag_at_mk3","beo_bms_mag_at_mk3","beo_bms_mag_at_mk3","beo_bms_mag_at_mk3","beo_bms_mag_at_mk3","beo_bms_mag_at_mk3","beo_bms_mag_at_mk3","beo_bms_mag_at_mk3","beo_bms_mag_at_mk3","beo_bms_mag_at_mk3","beo_bms_mag_at_mk3","beo_bms_mag_at_mk3"};
+			};
+		};
+	};
+	class bso_bms_offroad_AT_mk3_opf: bso_bms_offroad_AT_mk3
+	{
+		scope = 2;
+		scopeCurator = 2;
+		side = 0;
+		faction = "beo_ai_opf";
+		crew = "beo_ai_crew_opf";
+	};
+	class bso_bms_offroad_AT_mk3_ind: bso_bms_offroad_AT_mk3
+	{
+		scope = 2;
+		scopeCurator = 2;
+		side = 2;
+		faction = "beo_ai_ind";
+		crew = "beo_ai_crew_ind";
+	};
+
+
+
 };
