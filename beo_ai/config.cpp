@@ -12,7 +12,7 @@ class CfgPatches
 	{
 		units[] = {};
 		weapons[] = {};
-		requiredAddons[] = {"A3_Weapons_F","A3_Weapons_F_Mark","A3_Weapons_F_Exp","rhs_c_weapons","rhsusf_c_weapons","rhssaf_c_weapons","rhsgref_c_weapons"};
+		requiredAddons[] = {"A3_Weapons_F","A3_Weapons_F_Mark","A3_Weapons_F_Exp","rhs_c_weapons","rhsusf_c_weapons","rhssaf_c_weapons","rhsgref_c_weapons","uk3cb_factions_weapons"};
 		version = "1.0";
 		requiredVersion = "1.0";
 		author = "Walker";
@@ -142,8 +142,8 @@ class Mode_SemiAuto
 	midRangeProbab = 0.5;
 	maxRange = 500;
 	maxRangeProbab = 0.1;
-	aiDispersionCoefX = 15;
-	aiDispersionCoefY = 20;
+	aiDispersionCoefX = 3;
+	aiDispersionCoefY = 5;
 };
 class Mode_Burst: Mode_SemiAuto
 {
@@ -156,8 +156,8 @@ class Mode_Burst: Mode_SemiAuto
 	midRangeProbab = 0.7;
 	maxRange = 20;
 	maxRangeProbab = 0.2;
-	aiDispersionCoefX = 15;
-	aiDispersionCoefY = 20;
+	aiDispersionCoefX = 3;
+	aiDispersionCoefY = 5;
 };
 class Mode_FullAuto: Mode_SemiAuto
 {
@@ -169,8 +169,8 @@ class Mode_FullAuto: Mode_SemiAuto
 	midRangeProbab = 0.8;
 	maxRange = 5;
 	maxRangeProbab = 0.1;
-	aiDispersionCoefX = 15;
-	aiDispersionCoefY = 20;
+	aiDispersionCoefX = 3;
+	aiDispersionCoefY = 5;
 };
 
 class CfgWeapons
@@ -186,8 +186,8 @@ class CfgWeapons
 		midRangeProbab = 0.5;
 		maxRange = 500;
 		maxRangeProbab = 0.1;
-		aiDispersionCoefX = 15;
-		aiDispersionCoefY = 20;
+		aiDispersionCoefX = 3;
+		aiDispersionCoefY = 5;
 	};
 	class Binocular: Default
 	{
@@ -496,8 +496,8 @@ class CfgWeapons
 		midRangeProbab = 0.5;
 		maxRange = 500;
 		maxRangeProbab = 0.1;
-		aiDispersionCoefX = 15;
-		aiDispersionCoefY = 20;		
+		aiDispersionCoefX = 3;
+		aiDispersionCoefY = 5;		
 		class FullAuto;
 		class Single;
 		class Burst;
@@ -515,8 +515,8 @@ class CfgWeapons
 		midRangeProbab = 0.05;
 		maxRange = 70;
 		maxRangeProbab = 0.01;
-		aiDispersionCoefX = 15;
-		aiDispersionCoefY = 20;
+		aiDispersionCoefX = 3;
+		aiDispersionCoefY = 5;
 	};
 	class Pistol;
 	class Pistol_Base_F: Pistol
@@ -530,15 +530,15 @@ class CfgWeapons
 		midRangeProbab = 0.05;
 		maxRange = 70;
 		maxRangeProbab = 0.01;
-		aiDispersionCoefX = 15;
-		aiDispersionCoefY = 20;
+		aiDispersionCoefX = 3;
+		aiDispersionCoefY = 5;
 	};
 	class Throw: GrenadeLauncher
 	{
 		class ThrowMuzzle: GrenadeLauncher
 		{
-			aiDispersionCoefX = 20;
-			aiDispersionCoefY = 30;
+			aiDispersionCoefX = 10;
+			aiDispersionCoefY = 15;
 		};
 		class HandGrenadeMuzzle: ThrowMuzzle
 		{
