@@ -28,7 +28,7 @@ class CfgPatches
 		"A3_Weapons_F_EPB",
 		"rhs_c_weapons",
 		"rhsusf_c_weapons",
-
+		"uk3cb_factions_weapons",
 		"sp_fwa_AR10",
 		"sp_fwa_AR15",
 		"sp_fwa_Enfield",
@@ -411,6 +411,84 @@ class cfgWeapons
 		};
 
 	};
+
+
+	// m2 .50 cal JSRS sound
+	class HMG_01;
+	class HMG_M2: HMG_01
+	{
+		class manual;
+		class close;
+		class short;
+		class medium;
+		class far;
+	};
+	class RHS_M2: HMG_M2
+	{
+
+		class manual: manual
+		{
+			class StandardSound
+			{
+				soundSetShot[]=
+				{
+					"jsrs_m2_shot_soundset",
+					"jsrs_hmg_reverb_soundset"
+				};
+			};
+		};
+		class close: close
+		{
+			class StandardSound
+			{
+				soundSetShot[]=
+				{
+					"jsrs_m2_shot_soundset",
+					"jsrs_hmg_reverb_soundset"
+				};
+			};
+		};
+		class short: short
+		{
+			class StandardSound
+			{
+				soundSetShot[]=
+				{
+					"jsrs_m2_shot_soundset",
+					"jsrs_hmg_reverb_soundset"
+				};
+			};
+		};
+		class medium: medium
+		{
+			class StandardSound
+			{
+				soundSetShot[]=
+				{
+					"jsrs_m2_shot_soundset",
+					"jsrs_hmg_reverb_soundset"
+				};
+			};
+		};
+		class far: far
+		{
+			class StandardSound
+			{
+				soundSetShot[]=
+				{
+					"jsrs_m2_shot_soundset",
+					"jsrs_hmg_reverb_soundset"
+				};
+			};
+		};		
+	};	
+
+
+
+
+
+
+
 	#include "mods\fwa_weap.hpp"
 	#include "mods\3cb_weap.hpp"
 };

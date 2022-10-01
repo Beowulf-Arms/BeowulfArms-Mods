@@ -225,6 +225,21 @@
 			};
 		};
 	};      
+	class UK3CB_M16A3: UK3CB_M16A2_Base
+	{
+		class FullAuto: Mode_FullAuto
+		{
+			class basesoundmodetype;
+			class standardsound: basesoundmodetype
+			{
+				soundsetshot[] = {"jsrs_rifle_shake_soundset","jsrs_m4_shot_soundset","jsrs_m4_shell_soundset","jsrs_6x5mm_reflector_1"};
+			};
+			class silencedsound: basesoundmodetype
+			{
+				soundsetshot[] = {"jsrs_rifle_shake_soundset","jsrs_m4_shot_silenced_soundset","jsrs_m4_shell_soundset","jsrs_frame_caliber_5x56mm_silenced"};
+			};
+		};
+	};  
 	class uk3cb_aug_base: rifle_base_f
 	{
 		class single: mode_semiauto
@@ -936,5 +951,83 @@ class UK3CB_HK33KA2: UK3CB_G3_Base
 			{
 				soundSetShot[] = {"jsrs_pdw2000_shot_silenced_soundset","jsrs_9mm_sd_reverb_soundset"};
 			};
+		};
+	};
+
+
+	class UK3CB_MG42_base: Rifle_Base_F
+	{
+		class FullAuto;
+		class far_optic1;
+	};
+	class UK3CB_MG3: UK3CB_MG42_base
+	{
+
+		class close: FullAuto
+		{
+			burst=6;
+			
+			//aiRateOfFireDispersion=0;
+			//aiRateOfFire=0.059999999;
+			//aiRateOfFire=0;
+		};
+		class short: close
+		{
+			burst=8;
+		};
+		class medium: close
+		{
+			burst=12;
+		};
+		class medium_burst: close
+		{
+			burst=10;
+		};
+		class far: close
+		{
+			burst=12;
+		};
+		class far_optic2: far_optic1
+		{
+			burst=12;
+		};
+
+
+	};
+
+
+	class UK3CB_M60_base: Rifle_Base_F
+	{
+		class FullAuto;
+		class far_optic1;
+	};
+	class UK3CB_M60: UK3CB_M60_base
+	{
+		class close: FullAuto
+		{
+			burst=4;
+			//aiRateOfFireDispersion=0;
+			//aiRateOfFire=0.059999999;
+			//aiRateOfFire=0;
+		};
+		class short: close
+		{
+			burst=6;
+		};
+		class medium: close
+		{
+			burst=10;
+		};
+		class medium_burst: close
+		{
+			burst=8;
+		};
+		class far: close
+		{
+			burst=10;
+		};
+		class far_optic2: far_optic1
+		{
+			burst=10;
 		};
 	};

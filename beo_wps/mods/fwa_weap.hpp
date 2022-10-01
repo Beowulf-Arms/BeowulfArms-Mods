@@ -773,6 +773,7 @@ class sp_fwa_m60: sp_fwa_machinegun_base
 		{
 			soundSetShot[] = {"RHSUSF_M240_Shot_SoundSet","jsrs_mg_chain_clipper_soundset","RHSUSF_MMG1_Tail_SoundSet"};
 		};
+		burst=6;
 	};
 	class ai_FullAuto_short: ai_FullAuto_short
 	{
@@ -780,6 +781,7 @@ class sp_fwa_m60: sp_fwa_machinegun_base
 		{
 			soundSetShot[] = {"RHSUSF_M240_Shot_SoundSet","jsrs_mg_chain_clipper_soundset","RHSUSF_MMG1_Tail_SoundSet"};
 		};
+		burst=8;
 	};
 	class ai_FullAuto_medium: ai_FullAuto_medium
 	{
@@ -787,6 +789,7 @@ class sp_fwa_m60: sp_fwa_machinegun_base
 		{
 			soundSetShot[] = {"RHSUSF_M240_Shot_SoundSet","jsrs_mg_chain_clipper_soundset","RHSUSF_MMG1_Tail_SoundSet"};
 		};
+		burst=10;
 	};
 	class ai_FullAuto_far: ai_FullAuto_far
 	{
@@ -794,6 +797,7 @@ class sp_fwa_m60: sp_fwa_machinegun_base
 		{
 			soundSetShot[] = {"RHSUSF_M240_Shot_SoundSet","jsrs_mg_chain_clipper_soundset","RHSUSF_MMG1_Tail_SoundSet"};
 		};
+		burst=12;
 	};
 };
 class sp_fwa_mag58: sp_fwa_machinegun_base
@@ -811,6 +815,7 @@ class sp_fwa_mag58: sp_fwa_machinegun_base
 		{
 			soundSetShot[] = {"RHSUSF_m240_Shot_SoundSet","RHSUSF_rifle_med_Tail_SoundSet","RHSUSF_m240_stereoLayer_SoundSet"};
 		};
+		burst=6;
 	};
 	class ai_FullAuto_short: ai_FullAuto_short
 	{
@@ -818,6 +823,7 @@ class sp_fwa_mag58: sp_fwa_machinegun_base
 		{
 			soundSetShot[] = {"RHSUSF_m240_Shot_SoundSet","RHSUSF_rifle_med_Tail_SoundSet","RHSUSF_m240_stereoLayer_SoundSet"};
 		};
+		burst=8;
 	};
 	class ai_FullAuto_medium: ai_FullAuto_medium
 	{
@@ -825,6 +831,7 @@ class sp_fwa_mag58: sp_fwa_machinegun_base
 		{
 			soundSetShot[] = {"RHSUSF_m240_Shot_SoundSet","RHSUSF_rifle_med_Tail_SoundSet","RHSUSF_m240_stereoLayer_SoundSet"};
 		};
+		burst=10;
 	};
 	class ai_FullAuto_far: ai_FullAuto_far
 	{
@@ -832,6 +839,7 @@ class sp_fwa_mag58: sp_fwa_machinegun_base
 		{
 			soundSetShot[] = {"RHSUSF_m240_Shot_SoundSet","RHSUSF_rifle_med_Tail_SoundSet","RHSUSF_m240_stereoLayer_SoundSet"};
 		};
+		burst=12;
 	};
 };
 class sp_fwa_aa52: sp_fwa_machinegun_base
@@ -849,6 +857,7 @@ class sp_fwa_aa52: sp_fwa_machinegun_base
 		{
 			soundSetShot[] = {"RHSUSF_M240_Shot_SoundSet","RHSUSF_MMG1_Tail_SoundSet"};
 		};
+		burst=6;
 	};
 	class ai_FullAuto_short: ai_FullAuto_short
 	{
@@ -856,6 +865,7 @@ class sp_fwa_aa52: sp_fwa_machinegun_base
 		{
 			soundSetShot[] = {"RHSUSF_M240_Shot_SoundSet","RHSUSF_MMG1_Tail_SoundSet"};
 		};
+		burst=8;
 	};
 	class ai_FullAuto_medium: ai_FullAuto_medium
 	{
@@ -863,6 +873,7 @@ class sp_fwa_aa52: sp_fwa_machinegun_base
 		{
 			soundSetShot[] = {"RHSUSF_M240_Shot_SoundSet","RHSUSF_MMG1_Tail_SoundSet"};
 		};
+		burst=10;
 	};
 	class ai_FullAuto_far: ai_FullAuto_far
 	{
@@ -870,6 +881,7 @@ class sp_fwa_aa52: sp_fwa_machinegun_base
 		{
 			soundSetShot[] = {"RHSUSF_M240_Shot_SoundSet","RHSUSF_MMG1_Tail_SoundSet"};
 		};
+		burst=12;
 	};
 };
 
@@ -888,6 +900,7 @@ class sp_fwa_m1919a4_browning: sp_fwa_machinegun_base
 		{
 			soundSetShot[] = {"RHSUSF_M240_Shot_SoundSet","RHSUSF_MMG1_Tail_SoundSet"};
 		};
+		burst=8;
 	};
 	class ai_FullAuto_short: ai_FullAuto_short
 	{
@@ -895,6 +908,7 @@ class sp_fwa_m1919a4_browning: sp_fwa_machinegun_base
 		{
 			soundSetShot[] = {"RHSUSF_M240_Shot_SoundSet","RHSUSF_MMG1_Tail_SoundSet"};
 		};
+		burst=8;
 	};
 	class ai_FullAuto_medium: ai_FullAuto_medium
 	{
@@ -902,6 +916,7 @@ class sp_fwa_m1919a4_browning: sp_fwa_machinegun_base
 		{
 			soundSetShot[] = {"RHSUSF_M240_Shot_SoundSet","RHSUSF_MMG1_Tail_SoundSet"};
 		};
+		burst=10;
 	};
 	class ai_FullAuto_far: ai_FullAuto_far
 	{
@@ -909,6 +924,7 @@ class sp_fwa_m1919a4_browning: sp_fwa_machinegun_base
 		{
 			soundSetShot[] = {"RHSUSF_M240_Shot_SoundSet","RHSUSF_MMG1_Tail_SoundSet"};
 		};
+		burst=12;
 	};
 };
 class sp_fwa_mg4259: sp_fwa_machinegun_base
@@ -926,6 +942,7 @@ class sp_fwa_mg4259: sp_fwa_machinegun_base
 		{
 			soundSetShot[] = {"RHSGREF_MG42_delayed_Shot_SoundSet","RHSGREF_MMG1_delayed_Tail_SoundSet"};
 		};
+		burst=10;
 	};
 	class ai_FullAuto_short: ai_FullAuto_short
 	{
@@ -933,6 +950,7 @@ class sp_fwa_mg4259: sp_fwa_machinegun_base
 		{
 			soundSetShot[] = {"RHSGREF_MG42_delayed_Shot_SoundSet","RHSGREF_MMG1_delayed_Tail_SoundSet"};
 		};
+		burst=10;
 	};
 	class ai_FullAuto_medium: ai_FullAuto_medium
 	{
@@ -940,6 +958,7 @@ class sp_fwa_mg4259: sp_fwa_machinegun_base
 		{
 			soundSetShot[] = {"RHSGREF_MG42_delayed_Shot_SoundSet","RHSGREF_MMG1_delayed_Tail_SoundSet"};
 		};
+		burst=12;
 	};
 	class ai_FullAuto_far: ai_FullAuto_far
 	{
@@ -947,6 +966,7 @@ class sp_fwa_mg4259: sp_fwa_machinegun_base
 		{
 			soundSetShot[] = {"RHSGREF_MG42_delayed_Shot_SoundSet","RHSGREF_MMG1_delayed_Tail_SoundSet"};
 		};
+		burst=12;
 	};
 };
 
