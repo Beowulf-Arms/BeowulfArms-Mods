@@ -8,7 +8,7 @@ class CfgPatches
 		units[] = {};
 		weapons[] = {
 			};
-		requiredAddons[] = {"A3_Characters_F","A3_Characters_F_BLUFOR","A3_Characters_F_Common","A3_Characters_F_Heads"};
+		requiredAddons[] = {"A3_Characters_F","A3_Characters_F_BLUFOR","A3_Characters_F_Common","A3_Characters_F_Heads","simc_mc_67_core","simc_uaf_67_core","acre_sys_prc77","sp_webbing_58pattern"};
 		version = "1.0";
 		requiredVersion = "1.0";
 		versionDesc = "Beowulf Combat Gear";
@@ -19,12 +19,16 @@ class CfgPatches
 
 class cfgVehicles
 {
+	class B_soldier_base_F;
 	class I_G_Soldier_LAT_F;
-	class rhs_msv_rifleman_m88_patchless;
 	class C_man_polo_2_F;
+	class B_AssaultPack_rgr;
+
+	class rhs_msv_rifleman_m88_patchless;
 	class rhsgref_nat_base;
 	class rhsgref_hidf_base;
-	class B_soldier_base_F;
+
+
 
 	class SoldierGB;
 	class rhs_g_uniform1_base: SoldierGB
@@ -250,8 +254,14 @@ class cfgVehicles
 		respawnLinkedItems[] = {"ItemMap","ItemCompass","ItemWatch"};
 	};
 
-
+	// Beowulf smocks
 	#include "mods\smock_vehc.hpp"
+
+	//S&S Radio packs
+	#include "mods\smic_backpack_vehc.hpp"
+
+	//SP 58 Pattern
+	#include "mods\58_vehc.hpp"
 
 };	
 
@@ -276,6 +286,11 @@ class cfgWeapons
 	class U_C_Poloshirt_burgundy;
 	class rhs_uniform_gorka_r_g;
 	class rhs_uniform_gorka_r_g_gloves;
+	
+	class Vest_Camo_Base: ItemCore
+	{
+		class ItemInfo;
+	};
 
 	
 	// ------------------ 	RHS Hidden Uniforms   ----------------------
@@ -581,4 +596,7 @@ class cfgWeapons
 
 	// Beowulf Smocks
 	#include "mods\smock_weap.hpp"
+	
+	//SP 58 Pattern
+	#include "mods\58_weap.hpp"
 };	
