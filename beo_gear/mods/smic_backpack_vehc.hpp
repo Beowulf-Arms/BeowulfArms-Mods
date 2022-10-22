@@ -275,9 +275,9 @@ class B_simc_rajio_M43_1: B_simc_rajio_1
 class B_simc_rajio_M43_2: B_simc_rajio_M43_1
 {
     author = "Petr Svenda, ashton324";
-    model = "\simc_uaf_67\pack_rajio_m43.p3d";
-    hiddenSelections[] = {""};
-    hiddenSelectionsTextures[] = {""};
+   // model = "\simc_uaf_67\pack_rajio_m43.p3d";
+  //  hiddenSelections[] = {""};
+   // hiddenSelectionsTextures[] = {""};
     maximumLoad = 320;
     //maximumLoad = 170;
     mass = 50;
