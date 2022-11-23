@@ -62,7 +62,7 @@ class asdg_UnderSlot: asdg_SlotInfo { // Base under barrel slot
     };
 };
 
-/*
+
 class CfgMagazines
 {
 
@@ -98,7 +98,7 @@ class CfgMagazines
 
 	};
 };
-*/
+
 
 
 
@@ -165,7 +165,7 @@ class cfgWeapons
 	{
 		scope = 2;
 		scopeArsenal = 2;
-		displayName = "M320 (BSO Special)";
+		displayName = "(BEO) M320 (3x Rnd Special)";
 		magazineWell[] += {"CBA_40mm_M203_6rnds","3UGL_40x36"};
 	};
 
@@ -312,12 +312,11 @@ class cfgWeapons
 	};
 	
 
-	/*
 	// Adds extra mags to Galils + 5.56 ARM and 7.62 NATO varients
 	class arifle_Galat_base_lxWS;
 	class arifle_Galat_lxWS: arifle_Galat_base_lxWS
 	{
-		displayName = "(BSO) Galil ARM (7.62)";
+		displayName = "(BEO) Galil ARM (7.62)";
 		modes[] = {"FullAuto","Single","close","short","medium","far_optic1","far_optic2"};
 		class Single;
 		class FullAuto;
@@ -334,9 +333,9 @@ class cfgWeapons
 	{
 		magazines[] = {"35Rnd_556x45_Velko_lxWS","beo_mag_35rnd_556_galil_tracer","beo_mag_35rnd_556_galil_mixed","50Rnd_556x45_Velko_lxWS","beo_mag_50rnd_556_galil_tracer","beo_mag_50rnd_556_galil_mixed"};
 		magazineWell[] = {};
-		displayName = "(BSO) Galil ARM (5.56)";
+		displayName = "(BEO) Galil ARM (5.56)";
 		//dlc = "";
-		author = "BSO Walker";
+		author = "Walker";
 		scope = 2;
 		scopeArsenal = 2;
 		baseWeapon = "beo_galil_arm_556";
@@ -347,9 +346,9 @@ class cfgWeapons
 	{
 		magazines[] = {"rhsusf_20Rnd_762x51_m80_Mag","rhsusf_20Rnd_762x51_m118_special_Mag","rhsusf_20Rnd_762x51_m993_Mag","rhsusf_20Rnd_762x51_m62_Mag"};
 		magazineWell[] = {"M14_762x51","CBA_762x51_M14","CBA_762x51_M14_L","CBA_762x51_M14_XL"};
-		displayName = "(BSO) Galil ARM (7.62 NATO)";
+		displayName = "(BEO) Galil ARM (7.62 NATO)";
 		//dlc = "";
-		author = "BSO Walker";
+		author = "Walker";
 		scope = 2;
 		scopeArsenal = 2;
 		baseWeapon = "beo_galil_arm_762";
@@ -388,7 +387,7 @@ class cfgWeapons
 		
 	};
 
-	*/
+
 
 	// M1 garand un-JSRS
 	class rhs_weap_M1garand_Base_F: Rifle_Base_F
