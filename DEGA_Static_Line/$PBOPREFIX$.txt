@@ -1,0 +1,6 @@
+///////<HEADER>///////
+prefix=DEGA_Static_Line
+Mikero=DePbo.dll
+Pbo Type is: Arma Addon
+Sha: '6D841B1DE79EE8F6033F6FF9C50604841F34D5FF'
+//////</HEADER>//////
