@@ -99,7 +99,22 @@ class CfgMagazines
 	};
 };
 
+class cfgMagazineWells
+{
+	class 556x45_Velko
+	{
+		lxWS_Magazines[] = {
 
+		//"beo_mag_35rnd_556_galil_tracer",
+		//"beo_mag_50rnd_556_galil_tracer",
+		
+		"beo_mag_35rnd_556_galil_mixed",
+		"beo_mag_50rnd_556_galil_mixed",
+		
+		"35Rnd_556x45_Velko_lxWS","50Rnd_556x45_Velko_lxWS","35Rnd_556x45_Velko_snake_lxWS","50Rnd_556x45_Velko_snake_lxWS","35Rnd_556x45_Velko_reload_tracer_red_lxWS","50Rnd_556x45_Velko_reload_tracer_red_lxWS","35Rnd_556x45_Velko_snake_reload_tracer_red_lxWS","50Rnd_556x45_Velko_snake_reload_tracer_red_lxWS","35Rnd_556x45_Velko_tracer_red_lxWS","50Rnd_556x45_Velko_tracer_red_lxWS","35Rnd_556x45_Velko_snake_tracer_red_lxWS","50Rnd_556x45_Velko_snake_tracer_red_lxWS","35Rnd_556x45_Velko_reload_tracer_yellow_lxWS","50Rnd_556x45_Velko_reload_tracer_yellow_lxWS","35Rnd_556x45_Velko_snake_reload_tracer_yellow_lxWS","50Rnd_556x45_Velko_snake_reload_tracer_yellow_lxWS","35Rnd_556x45_Velko_tracer_yellow_lxWS","50Rnd_556x45_Velko_tracer_yellow_lxWS","35Rnd_556x45_Velko_snake_tracer_yellow_lxWS","50Rnd_556x45_Velko_snake_tracer_yellow_lxWS","35Rnd_556x45_Velko_reload_tracer_green_lxWS","50Rnd_556x45_Velko_reload_tracer_green_lxWS","35Rnd_556x45_Velko_snake_reload_tracer_green_lxWS","50Rnd_556x45_Velko_snake_reload_tracer_green_lxWS","35Rnd_556x45_Velko_tracer_green_lxWS","50Rnd_556x45_Velko_tracer_green_lxWS","35Rnd_556x45_Velko_snake_tracer_green_lxWS","50Rnd_556x45_Velko_snake_tracer_green_lxWS"};
+
+	};
+};
 
 
 class Mode_SemiAuto;
@@ -207,10 +222,10 @@ class cfgWeapons
 		
 	};
 	
-	class tacs_Mk20_Black_F: arifle_Mk20_plain_F
-	{
-		scope = 1; // because fuck that classname 
-	};
+	//class tacs_Mk20_Black_F: arifle_Mk20_plain_F
+	//{
+	//	scope = 1; // because fuck that classname 
+	//};
 	
 	class rhs_weap_akms_folded: rhs_weap_akms
 	{
@@ -331,8 +346,8 @@ class cfgWeapons
 	};
 	class beo_galil_arm_556: arifle_Galat_lxWS
 	{
-		magazines[] = {"35Rnd_556x45_Velko_lxWS","beo_mag_35rnd_556_galil_tracer","beo_mag_35rnd_556_galil_mixed","50Rnd_556x45_Velko_lxWS","beo_mag_50rnd_556_galil_tracer","beo_mag_50rnd_556_galil_mixed"};
-		magazineWell[] = {};
+		//magazines[] = {"35Rnd_556x45_Velko_lxWS","beo_mag_35rnd_556_galil_tracer","beo_mag_35rnd_556_galil_mixed","50Rnd_556x45_Velko_lxWS","beo_mag_50rnd_556_galil_tracer","beo_mag_50rnd_556_galil_mixed"};
+		magazineWell[] = {"556x45_Velko"};
 		displayName = "(BEO) Galil ARM (5.56)";
 		//dlc = "";
 		author = "Walker";
@@ -490,4 +505,5 @@ class cfgWeapons
 
 	#include "mods\fwa_weap.hpp"
 	#include "mods\3cb_weap.hpp"
+	#include "mods\niarms_weap.hpp"
 };
