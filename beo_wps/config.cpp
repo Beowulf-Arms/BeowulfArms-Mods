@@ -348,6 +348,7 @@ class cfgWeapons
 	{
 		//magazines[] = {"35Rnd_556x45_Velko_lxWS","beo_mag_35rnd_556_galil_tracer","beo_mag_35rnd_556_galil_mixed","50Rnd_556x45_Velko_lxWS","beo_mag_50rnd_556_galil_tracer","beo_mag_50rnd_556_galil_mixed"};
 		magazineWell[] = {"556x45_Velko"};
+		magazines[] = {"35Rnd_556x45_Velko_lxWS","beo_mag_35rnd_556_galil_tracer","beo_mag_35rnd_556_galil_mixed","50Rnd_556x45_Velko_lxWS","beo_mag_50rnd_556_galil_tracer","beo_mag_50rnd_556_galil_mixed"};
 		displayName = "(BEO) Galil ARM (5.56)";
 		//dlc = "";
 		author = "Walker";
