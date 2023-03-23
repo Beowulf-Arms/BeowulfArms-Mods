@@ -62,6 +62,83 @@ class asdg_UnderSlot: asdg_SlotInfo { // Base under barrel slot
     };
 };
 
+class SensorTemplatePassiveRadar;
+class SensorTemplateAntiRadiation;
+class SensorTemplateActiveRadar;
+class SensorTemplateIR;
+class SensorTemplateVisual;
+class SensorTemplateMan;
+class SensorTemplateLaser;
+class SensorTemplateNV;
+class SensorTemplateDataLink;
+
+class CfgAmmo
+{
+
+	class UK3CB_M68_105mm_HEAT_Y;
+	class beo_90mm_HEAT_Y: UK3CB_M68_105mm_HEAT_Y
+	{
+		indirectHit=12;
+		indirectHitRange=2;	
+		hit=200;
+	};
+
+	class UK3CB_M68_105mm_HE_Y;
+	class beo_90mm_HE_Y: UK3CB_M68_105mm_HE_Y
+	{
+		indirectHit=20;
+		indirectHitRange=6;	
+		hit=250;
+	};
+
+
+	class MissileBase;
+	class M_127mm_Firefist_AT: MissileBase
+	{
+		class Components;
+		class SensorsManagerComponent;
+	};
+	
+	class beo_ammo_Firefist_AT: M_127mm_Firefist_AT
+	{
+		manualControl = 1;
+		laserLock = 1;
+		class Components: Components
+		{
+			class SensorsManagerComponent: SensorsManagerComponent
+			{
+				class Components: Components
+				{
+					class LaserSensorComponent: SensorTemplateLaser 
+					{
+						class AirTarget
+						{
+							minRange = 100;
+							maxRange = 10000;
+							objectDistanceLimitCoef = -1;
+							viewDistanceLimitCoef = -1;
+						};
+						class GroundTarget
+						{
+							minRange = 100;
+							maxRange = 10000;
+							objectDistanceLimitCoef = -1;
+							viewDistanceLimitCoef = -1;
+						};
+					
+					};
+					
+				};			
+			};
+		};						
+		
+		
+		
+	};	
+
+
+};
+
 
 class CfgMagazines
 {
@@ -97,6 +174,48 @@ class CfgMagazines
 		tracersEvery = 4;
 
 	};
+
+	class UK3CB_20_HE_Y;
+	class beo_mag_90mm_HE: UK3CB_20_HE_Y
+	{
+		displayName = "90mm HE";
+		ammo = "beo_90mm_HE_Y";
+
+	};
+	class UK3CB_20_HEAT_Y;
+	class beo_mag_90mm_HEAT: UK3CB_20_HEAT_Y
+	{
+		displayName = "90mm HEAT";
+		ammo = "beo_90mm_HE_Y";
+
+	};
+
+
+// Wiesel
+	class rhs_mag_TOW2b;
+	class beo_mag_2rnd_TOW2b: rhs_mag_TOW2b
+	{
+		count = 2;
+	};
+	class rhs_mag_TOW2bb;
+	class beo_mag_2rnd_TOW2bb: rhs_mag_TOW2bb
+	{
+		count = 2;
+	};	
+	
+	class 2Rnd_127mm_Firefist_missiles;
+	class beo_mag_2rnd_firefist: 2Rnd_127mm_Firefist_missiles
+	{
+		count = 2;
+		author = "BEO Walker";
+		displayName = "[BEO] FireFIST Missile";
+		ammo = "beo_ammo_Firefist_AT";
+		
+	};
+
+
+
+
 };
 
 class cfgMagazineWells
@@ -498,9 +617,31 @@ class cfgWeapons
 		};		
 	};	
 
+	// Vehicle Weapons
+	class UK3CB_105mm_M68E1;
+	class beo_weap_90mm: UK3CB_105mm_M68E1
+	{	
+		displayName="D921 90mm";
+		magazines[] = {
+			"beo_mag_90mm_HE",
+			"beo_mag_90mm_HEAT"
+		};
+	};
 
+	//wiesel
 
-
+	class missiles_titan;
+	class Rhs_weap_TOW_Launcher_static: missiles_titan
+	{
+		magazines[] += {"beo_mag_2rnd_TOW2b","beo_mag_2rnd_TOW2bb"};
+		
+	};
+	
+	class MissileLauncher;
+	class missiles_Firefist: MissileLauncher
+	{
+		magazines[] += {"beo_mag_2rnd_firefist"};
+	};	
 
 
 
