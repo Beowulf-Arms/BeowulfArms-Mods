@@ -8,8 +8,8 @@ class CfgPatches
 		weapons[] = {"beo_ai_weap_rocketLauncher","beo_ai_weap_spg9","rhs_weap_rpg26","rhs_weap_rpg7","rhs_weap_smaw","rhs_weap_maaws","rhs_weap_rshg2","rhs_weap_M136","rhs_weap_m72a7","rhs_weap_rpg75","rhs_weap_m72_ASM","rhs_weap_m72e9","beo_nlaw_asm"};
 		version = "1.0";
 		requiredVersion = "1.0";
-		requiredAddons[] = {"rhs_c_weapons","rhsusf_c_weapons","rhsgref_c_weapons"};
-		author = "BSO Walker";
+		requiredAddons[] = {"rhs_c_weapons","rhsusf_c_weapons","rhsgref_c_weapons","beo_ai"};
+		author = "BEO Walker";
 		magazines[] = {"beo_ai_70mm_19rnds","beo_ai_pg7v","beo_ai_pg9v","beo_ai_smaw","beo_ai_maaws"};
 		ammo[] = {"R_PG32V_F","beo_ammo_nlaw_asm","R_PG7_F","M_SPG9_HEAT","R_MRAAWS_HEAT_F","rhs_rpg26_rocket","rhs_rpg7v2_pg7vl","rhs_rpg7v2_pg7vr","rhs_rpg7v2_tbg7v","rhs_rshg2_rocket","rhs_ammo_rpg75_rocket","rhs_ammo_M136_rocket","rhs_ammo_M136_hp_rocket","rhs_ammo_M136_hedp_rocket","rhs_ammo_m72a7_rocket","rhs_ammo_m72_asm_rocket","rhs_ammo_m72e9_rocket","rhs_rpg7v2_pg7vl_penetrator","rhs_rpg7v2_pg7vr_penetrator","rhs_rpg26_penetrator","rhs_ammo_M136_penetrator","beo_ai_spg9_pg9v_ammo","beo_ai_spg9_pg9v_penetrator","beo_ai_rpg7_pg7v_ammo","beo_ai_rpg7_pg7v_penetrator","beo_ai_smaw_ammo","beo_ai_smaw_penetrator","beo_ai_maaws_ammo","beo_ai_maaws_penetrator","beo_ai_s8","beo_ai_s8_penetrator","rhs_ammo_atgmBase_base"};
 	};
@@ -61,12 +61,12 @@ class CfgVehicles
 	class beo_ai_spg9: rhsgref_ins_SPG9
 	{
 		scope = 2;
-		displayName = "[BSO AI] SPG9";
-		author = "BSO Walker";
+		displayName = "[BEO AI] SPG9";
+		author = "BEO Walker";
 		side = 1;
-		faction = "BLU_F";
-		crew = "B_Soldier_F";
-		typicalCargo[] = {"B_Soldier_F"};
+		faction = "beo_ai_blu";
+		crew = "beo_ai_crew";
+		typicalCargo[] = {"beo_ai_crew"};
 		class Turrets: Turrets
 		{
 			class MainTurret: MainTurret
@@ -76,6 +76,26 @@ class CfgVehicles
 			};
 		};
 	};
+
+	class beo_ai_spg9_opf: beo_ai_spg9
+	{
+		scope = 2;
+		scopeCurator = 2;
+		side = 0;
+		faction = "beo_ai_opf";
+		crew = "beo_ai_crew_opf";
+	};
+
+	class beo_ai_spg9_ind: beo_ai_spg9
+	{
+		scope = 2;
+		scopeCurator = 2;
+		side = 2;
+		faction = "beo_ai_ind";
+		crew = "beo_ai_crew_ind";
+	};
+
+
 	class UK3CB_Hilux_Rocket;
 	class UK3CB_I_G_Hilux_Rocket: UK3CB_Hilux_Rocket
 	{
@@ -85,12 +105,12 @@ class CfgVehicles
 	class beo_ai_hilux_rocket: UK3CB_I_G_Hilux_Rocket
 	{
 		scopt = 2;
-		displayName = "[BSO AI] Hilux (Rocket)";
-		author = "BSO Walker";
+		displayName = "[BEO AI] Hilux (Rocket)";
+		author = "BEO Walker";
 		side = 1;
-		faction = "BLU_F";
-		crew = "B_Soldier_F";
-		typicalCargo[] = {"B_Soldier_F"};
+		faction = "beo_ai_blu";
+		crew = "beo_ai_crew";
+		typicalCargo[] = {"beo_ai_crew"};
 		class Turrets: Turrets
 		{
 			class MainTurret: MainTurret
@@ -100,6 +120,28 @@ class CfgVehicles
 			};
 		};
 	};
+
+	class beo_ai_hilux_rocket_opf: beo_ai_hilux_rocket
+	{
+		scope = 2;
+		scopeCurator = 2;
+		side = 0;
+		faction = "beo_ai_opf";
+		crew = "beo_ai_crew_opf";
+	};
+
+	class beo_ai_hilux_rocket_ind: beo_ai_hilux_rocket
+	{
+		scope = 2;
+		scopeCurator = 2;
+		side = 2;
+		faction = "beo_ai_ind";
+		crew = "beo_ai_crew_ind";
+	};
+
+
+
+
 };
 class cfgWeapons
 {
@@ -152,9 +194,9 @@ class cfgWeapons
 	class beo_ai_weap_rocketLauncher: UK3CB_70mm_rocket_launcher
 	{
 		scope = 2;
-		////aiDispersionCoefX = 10;
-		////aiDispersionCoefy = 10;
-		//magazines[] += {"beo_ai_70mm_19rnds"};
+		aiDispersionCoefX = 3;
+		aiDispersionCoefy = 5;
+		magazines[] += {"beo_ai_70mm_19rnds"};
 	};
 	class rhs_weap_SPG9;
 	class beo_ai_weap_spg9: rhs_weap_SPG9
@@ -494,47 +536,50 @@ class cfgMagazines
 		allowedSlots[] = {};
 		ammo = "beo_ammo_nlaw_asm";
 	};
-	class 70mm_19rnds;
-	class beo_ai_70mm_19rnds: 70mm_19rnds
-	{
-		scope = 2;
-		cost = 1;
-		ammo = "beo_ai_s8";
-		displayName = "[BSO AI] 70mm Rocket Launcher 19rnds";
-	};
 	class rhs_rpg7_OG7V_mag;
 	class beo_ai_pg7v: rhs_rpg7_OG7V_mag
 	{
 		scope = 2;
 		cost = 1;
 		descriptionShort = "BSO AI CINEMATIC AMMO<br />Type: 40mm HE-Fragmentation Rocket<br />Rounds: 1<br />Used in: RPG-7";
-		displayName = "[BSO AI] PG7V";
-		displayNameShort = "[BSO] PG7V";
+		displayName = "[BEO AI] PG7V";
+		displayNameShort = "[BEO] PG7V";
 		model = "\rhsafrf\addons\rhs_weapons\rpg7\magazines\rhs_pg7v_mag";
 		modelSpecial = "\rhsafrf\addons\rhs_weapons\mag_proxies\rhs_mag_pg7v";
 		picture = "\rhsafrf\addons\rhs_inventoryicons\data\magazines\rhs_rpg7_PG7V_mag_ca.paa";
 		allowedSlots[] = {801,701,901};
-		author = "BSO Walker";
+		author = "BEO Walker";
 		ammo = "beo_ai_rpg7_pg7v_ammo";
+	};
+
+	*/	
+	class 70mm_19rnds;
+	class beo_ai_70mm_19rnds: 70mm_19rnds
+	{
+		scope = 2;
+		cost = 1;
+		ammo = "beo_ai_s8";
+		displayName = "[BEO AI] 70mm Rocket Launcher 19rnds";
 	};
 	class rhs_mag_PG9V;
 	class beo_ai_pg9v: rhs_mag_PG9V
 	{
 		scope = 2;
 		cost = 1;
-		descriptionShort = "BSO AI CINEMATIC AMMO<br />Type: 73mm HE-Fragmentation Rocket<br />Rounds: 1<br />Used in: SPG-9";
-		displayName = "[BSO AI] PG9V";
-		displayNameShort = "[BSO] PG9V";
+		descriptionShort = "BEO AI CINEMATIC AMMO<br />Type: 73mm HE-Fragmentation Rocket<br />Rounds: 1<br />Used in: SPG-9";
+		displayName = "[BEO AI] PG9V";
+		displayNameShort = "[BEO] PG9V";
 		ammo = "beo_ai_spg9_pg9v_ammo";
 	};
+	/*
 	class rhs_mag_smaw_HEDP;
 	class beo_ai_smaw: rhs_mag_smaw_HEDP
 	{
 		scope = 2;
 		descriptionShort = "BSO AI CINEMATIC AMMO<br />Type: 83mm Rocket<br />Rounds: 1<br />Used in: SMAW";
-		displayName = "[BSO AI] Mk.4 Mod 0 HEDP";
-		displayNameShort = "[BSO] Mk.4 HEDP";
-		author = "BSO Walker";
+		displayName = "[BEO AI] Mk.4 Mod 0 HEDP";
+		displayNameShort = "[BEO] Mk.4 HEDP";
+		author = "BEO Walker";
 		ammo = "beo_ai_smaw_ammo";
 	};
 	class rhs_mag_maaws_HEAT;
@@ -542,9 +587,9 @@ class cfgMagazines
 	{
 		scope = 2;
 		descriptionShort = "BSO AI CINEMATIC AMMO<br />Type: 84mm Recoilless Rifle Shell<br />Rounds: 1<br />Used in: M3 MAAWS";
-		displayName = "[BSO AI] FFV751 HEAT";
-		displayNameShort = "[BSO] HEAT";
-		author = "BSO Walker";
+		displayName = "[BEO AI] FFV751 HEAT";
+		displayNameShort = "[BEO] HEAT";
+		author = "BEO Walker";
 		ammo = "beo_ai_maaws_ammo";
 	};
 	
@@ -737,7 +782,7 @@ class cfgAmmo
 		cost = 0.1;
 		aiAmmoUsageFlags = "64 + 128 + 256 + 512";
 	};
-	/*
+	
 	class rhs_ammo_pg9v;
 	class beo_ai_spg9_pg9v_ammo: rhs_ammo_pg9v
 	{
@@ -750,11 +795,11 @@ class cfgAmmo
 		ace_frag_metal = 100;
 		ace_frag_skip = 0;
 		ace_rearm_caliber = 70;
-		cost = 0.1;
+		cost = 5;
 		scope = 2;
-		airLock = 1;
+		airLock = 0;
 		allowAgainstInfantry = 1;
-		aiAmmoUsageFlags = "64 + 128 + 256 + 512";
+		aiAmmoUsageFlags = "64 + 128 + 512";
 		hit = 70;
 		indirectHit = 3;
 		indirectHitRange = 10;
@@ -771,6 +816,7 @@ class cfgAmmo
 		aiAmmoUsageFlags = "64 + 128 + 256 + 512";
 		hit = 80;
 	};
+	/*
 	class rhs_rpg7v2_pg7v;
 	class beo_ai_rpg7_pg7v_ammo: rhs_rpg7v2_pg7v
 	{
@@ -867,6 +913,7 @@ class cfgAmmo
 		aiAmmoUsageFlags = "64 + 128 + 256 + 512";
 		hit = 100;
 	};
+	*/
 	class rhs_ammo_s8;
 	class beo_ai_s8: rhs_ammo_s8
 	{
@@ -882,10 +929,10 @@ class cfgAmmo
 		scope = 2;
 		whistleDist = 30;
 		submunitionAmmo = "beo_ai_s8_penetrator";
-		airLock = 1;
+		airLock = 0;
 		allowAgainstInfantry = 1;
-		aiAmmoUsageFlags = "64 + 128 + 256 + 512";
-		hit = 75;
+		aiAmmoUsageFlags = "64 + 128 + 512";
+		hit = 25;
 		indirectHit = 2;
 		indirectHitRange = 10;
 		cost = 0.1;
@@ -902,7 +949,6 @@ class cfgAmmo
 		indirectHitRange = 0;
 		cost = 0.1;
 	};
-	*/
 	class M_Titan_AT;
 	class rhs_ammo_atgmBase_base: M_Titan_AT
 	{
