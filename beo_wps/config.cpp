@@ -647,5 +647,5 @@ class cfgWeapons
 
 	#include "mods\fwa_weap.hpp"
 	#include "mods\3cb_weap.hpp"
-	#include "mods\niarms_weap.hpp"
+	//#include "mods\niarms_weap.hpp"
 };
