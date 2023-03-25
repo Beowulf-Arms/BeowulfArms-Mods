@@ -69,6 +69,14 @@ class CfgAISkill
 	spotTime[] = {0, 0, 1, 0.7};
 };
 
+
+class cfgAmmo
+{
+	class MissileBase;
+	#include "mods\rhs_atgm_aa.hpp"
+};
+
+
 class cfgVehicles
 {
 	
