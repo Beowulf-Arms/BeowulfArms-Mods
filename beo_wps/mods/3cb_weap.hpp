@@ -855,6 +855,7 @@ class UK3CB_HK33KA2: UK3CB_G3_Base
 				soundsetshot[] = {"jsrs_rifle_shake_soundset","jsrs_1903_shot_soundset","jsrs_1903_shell_soundset","jsrs_12x7mm_reflector_1"};
 			};
 		};
+		reloadaction = "UK3CB_GestureReloadM1903A1";
 	};
     class rhs_weap_XM2010_Base_F;
 	class UK3CB_CZ550: rhs_weap_XM2010_Base_F
