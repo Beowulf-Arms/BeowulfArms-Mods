@@ -161,7 +161,7 @@ class CfgVehicles
 		{		
 			class MainTurret: MainTurret
 			{
-				magazines[] = {"beo_arty_mag12_122_TEST","beo_arty_mag12_122_TEST","beo_arty_mag12_122_TEST","beo_arty_mag12_122_TEST","beo_arty_mag12_122_TEST","beo_arty_mag12_122_TEST"};
+				magazines[] = {"beo_arty_mag_122_he_test","beo_arty_mag_122_he_test","beo_arty_mag_122_he_test","beo_arty_mag_122_he_test","beo_arty_mag_122_he_test","beo_arty_mag_122_he_test"};
 				weapons[] = {"beo_arty_rokit"};
 			};
 		};	
@@ -266,8 +266,8 @@ class CfgVehicles
 		{		
 			class MainTurret: MainTurret
 			{
-				magazines[] = {"beo_arty_mag_122_cluster","beo_arty_mag_122_cluster","beo_arty_mag_122_cluster","beo_arty_mag_122_cluster","beo_arty_mag_122_cluster","beo_arty_mag_122_cluster","beo_arty_mag_122_cluster","beo_arty_mag_122_cluster","beo_arty_mag_122_cluster","beo_arty_mag_122_cluster","beo_arty_mag_122_cluster","beo_arty_mag_122_cluster"};
-				weapons[] = {"beo_arty_rokit"};
+				magazines[] = {"beo_arty_mag10_122_he","beo_arty_mag10_122_he","beo_arty_mag10_122_he","beo_arty_mag10_122_he","beo_arty_mag10_122_he","beo_arty_mag10_122_he"};
+				weapons[] = {"beo_arty_rokit_mlrs"};
 			};
 		};	
 
@@ -557,6 +557,7 @@ class CfgWeapons
 	
 	class beo_arty_rokit: rockets_230mm_GAT
 	{
+		displayName="ROKIT Launcher";
 		class Close: Close
 		{
 			displayName = "Close";
@@ -567,27 +568,22 @@ class CfgWeapons
 			maxrangeprobab = 1;
 			maxrange = 1000;
 			artilleryDispersion = 5;
-			//aiDispersionCoefX = 1.4;
-			//aiDispersionCoefY = 1.5;
-			reloadTime = 30;
+			reloadTime = 10;
 			showToPlayer = 1;
 			burst = 1;
 			aiBurstTerminable = 0;
-			//artilleryCharge = 0.25;
 			artilleryCharge = 0.25;
 		};
 		class Medium: Medium
 		{
 			artilleryDispersion = 5;
-			//aiDispersionCoefX = 1.5;
-			//aiDispersionCoefY = 1.5;
 			minrangeprobab = 0.2;
 			minrange = 1000;
 			midrangeprobab = 0.2;
 			midrange = 1230;
 			maxrangeprobab = 0.2;
 			maxrange = 1460;
-			reloadTime = 30;
+			reloadTime = 10;
 			showToPlayer = 1;
 			burst = 1;
 			aiBurstTerminable = 0;
@@ -596,15 +592,13 @@ class CfgWeapons
 		class Far: Far
 		{
 			artilleryDispersion = 10;
-			//aiDispersionCoefX = 1.5;
-			//aiDispersionCoefY = 1.5;
 			minrangeprobab = 0.1;
 			minrange = 1460;
 			midrangeprobab = 0.1;
 			midrange = 2030;
 			maxrangeprobab = 0.1;
 			maxrange = 2600;
-			reloadTime = 30;
+			reloadTime = 10;
 			showToPlayer = 1;
 			burst = 1;
 			aiBurstTerminable = 0;
@@ -614,15 +608,13 @@ class CfgWeapons
 		{
 			displayName = "Very Far";
 			artilleryDispersion = 15;
-			//aiDispersionCoefX = 1.5;
-			//aiDispersionCoefY = 1.5;
 			minrangeprobab = 0.1;
 			minrange = 2600;
 			midrangeprobab = 0.1;
 			midrange = 3325;
 			maxrangeprobab = 0.1;
 			maxrange = 4050;
-			reloadTime = 30;
+			reloadTime = 10;
 			showToPlayer = 1;
 			burst = 1;
 			aiBurstTerminable = 0;
@@ -639,9 +631,7 @@ class CfgWeapons
 			maxrangeprobab = 1;
 			maxrange = 360;
 			artilleryDispersion = 5;
-			//aiDispersionCoefX = 1.5;
-			//aiDispersionCoefY = 1.5;
-			reloadTime = 30;
+			reloadTime = 10;
 			showToPlayer = 1;
 			burst = 1;
 			aiBurstTerminable = 0;
@@ -654,15 +644,14 @@ class CfgWeapons
 			"VeryFar"
 		};
 		magazines[] = {
-			"beo_arty_mag12_122_TEST",
-			"beo_arty_mag12_122_he",
-			"beo_arty_mag12_122_cluster"
+			"beo_arty_mag_122_he",
+			"beo_arty_mag_122_cluster"
 		};
 	};
 	
 	class beo_arty_rokit_mlrs: beo_arty_rokit
 	{
-		magazineReloadTime = 60;
+		magazineReloadTime = 180;
 		class Close: Close
 		{
 			displayName = "Close";
@@ -795,7 +784,6 @@ class CfgWeapons
 		modes[]={};
 		picture="\z\ace\addons\csw\UI\StaticMortarTube_Icon.paa";
         scope = 2;
-        modes[] = {};
 
         class ACE_CSW 
 		{
@@ -832,7 +820,6 @@ class CfgWeapons
 		modes[]={};
 		picture="\z\ace\addons\csw\UI\StaticMortarTube_Icon.paa";
         scope = 2;
-        modes[] = {};
 
         class ACE_CSW 
 		{
@@ -906,6 +893,17 @@ class cfgMagazines
 	};	
 	
 
+	class beo_arty_mag_122_he_test: 12Rnd_230mm_rockets
+	{
+		scope = 2;
+		ammo = "beo_arty_ammo_122_r_test";
+		displayName = "122mm HE ROKIT (Test)";
+		displayNameShort="122mm HE ROKIT (Test)";
+		count = 1;
+		initSpeed = 400;
+		picture="\A3\Weapons_F\launchers\RPG32\data\UI\gear_rpg32_rocket_ca.paa";
+
+	};	
  // ace CSW
 
     class beo_arty_mag_122_he_csw_mag: beo_arty_mag_122_he 
